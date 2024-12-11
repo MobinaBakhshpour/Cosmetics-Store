@@ -1,0 +1,46 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+.rightSection{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.3rem;
+
+}
+.rightSection img{
+    max-width: 150px;
+    height: 76px;
+}
+.menuTitle{
+    text-decoration: none;
+    font-family: var(--font-style-main);
+    font-size: 1.3rem;
+    color: black;
+}
+.leftSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem
+}
+.basketIcon{
+    font-size: 1.5rem;
+}
+.userIcon{
+    font-size: 1.8rem;
+}
+.searchBar{
+    border: 1px solid black;
+    border-radius: 1.5rem;
+}
+#searchGroup{
+    font-size: 25px;
+  padding: 3px;
+}
+.searchBar-input{
+    border:none;
+}
