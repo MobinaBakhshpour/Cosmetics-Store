@@ -15,18 +15,9 @@ export default function NavBar() {
 
 
             <div className="leftSection">
-                <ButtonToolbar className='searchBar'>
-                    <InputGroup>
-                        <InputGroup.Text id="searchGroup"><BsSearch /></InputGroup.Text>
-                        <Form.Control
-                            type="text"
-                            placeholder=""
-                            aria-label=""
-                            aria-describedby="searchGroup"
-                            className="searchBar-input"
-                        />
-                    </InputGroup>
-                </ButtonToolbar>
+                <div className="search__container">
+                    <input className="search__input" type="text" placeholder=""/>
+                </div>
                 <div className='basketIcon'><BsBag /></div>
                 <div className='userIcon'><BsPerson /></div>
 
