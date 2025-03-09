@@ -7,7 +7,7 @@ export default function NavBar() {
     return (
         <div className="navBar">
             <div className="rightSection">
-                <img src="imgs/logo.png" alt="" className="logo" />
+                <a href=""><img src="imgs/logo.png" alt="" className="logo" /></a>
                 <a href="" className="menuTitle"> خانه  </a>
                 <a href="" className="menuTitle">  درباره ما </a>
                 <a href="" className="menuTitle"> وبلاگ  </a>
@@ -16,10 +16,10 @@ export default function NavBar() {
 
             <div className="leftSection">
                 <div className="search__container">
-                    <input className="search__input" type="text" placeholder=""/>
+                    <input className="search__input" type="text" placeholder="" />
                 </div>
-                <div className='basketIcon'><BsBag /></div>
-                <div className='userIcon'><BsPerson /></div>
+                <div className='basketIcon'><a href="#"><BsBag /></a></div>
+                <div className='userIcon'><a href="#"><BsPerson /></a></div>
 
             </div>
         </div>
