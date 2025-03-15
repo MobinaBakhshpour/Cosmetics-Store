@@ -1,44 +1,69 @@
-import React from "react";
-import './Slideshow.css'
+import React, { useEffect, useState, useRef } from "react";
+import './Slideshow.css';
 
 export default function Slideshow() {
-    let slideIndex = 0;
-    document.addEventListener("DOMContentLoaded", showSlides);
+    const [slideIndex, setSlideIndex] = useState(0);
+    const slideRef = useRef(null);
+    const dotRef = useRef(null);
 
-    function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+    // نمایش اولین اسلاید در لحظه mount شدن
+    useEffect(() => {
+        if (slideRef.current && dotRef.current) {
+            let slides = slideRef.current.children;
+            let dots = dotRef.current.children;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[0].style.display = "block"; // اولین اسلاید را نمایش بده
+            dots[0].className += " active"; // نقطه‌ی مربوطه را فعال کن
         }
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 8000);
+    }, []);
 
-    }
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (slideRef.current && dotRef.current) {
+                let slides = slideRef.current.children;
+                let dots = dotRef.current.children;
 
+                // پنهان کردن تمام اسلایدها
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                let newIndex = (slideIndex + 1) % slides.length;
+                setSlideIndex(newIndex);
+
+                slides[newIndex].style.display = "block"; // نمایش اسلاید جدید
+
+                // حذف کلاس active از همه‌ی دایره‌ها
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                dots[newIndex].className += " active"; // فعال‌سازی نقطه مربوطه
+            }
+        }, 8000);
+
+        return () => clearInterval(interval);
+    }, [slideIndex]);
 
     return (
-        <>
-            <div className="slideshow-container">
+        <div className="slideshow-container">
+            <div ref={slideRef}>
                 <div className="mySlides fade">
-                <a href="#"><img src="/imgs/slide1.png" /></a>
+                    <a href="#"><img className="slide-img" src="/imgs/slide1.png" alt="Slide 1" /></a>
                 </div>
 
                 <div className="mySlides fade">
-                   <a href="#"><img src="/imgs/slide2.png" /></a>
+                    <a href="#"><img className="slide-img" src="/imgs/slide2.png" alt="Slide 2" /></a>
                 </div>
-
-                <span className="dot" ></span>
-                <span className="dot" ></span>
             </div>
-        </>
-    )
 
+            <div ref={dotRef}>
+                <span className="dot"></span>
+                <span className="dot"></span>
+            </div>
+        </div>
+    );
 }

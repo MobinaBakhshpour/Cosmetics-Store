@@ -4,21 +4,18 @@
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: 58px 0;
-    text-align:center
-
+    width: 100%;
+    margin: var(--m-TB) 0 0 var(--m-TB);
+    text-align:center;
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;
+    display: none;   
 }
 
-
-img{
-    width: 100%;
+.slide-img{
+    max-width: 100%;
 }
 
 /* The dots/bullets/indicators */
