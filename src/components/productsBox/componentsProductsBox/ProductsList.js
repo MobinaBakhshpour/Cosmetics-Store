@@ -1,7 +1,17 @@
 import React from 'react'
-
-export default function ProductsList() {
+import ProductCard from './ProductCard'
+import {Alert} from 'react-bootstrap';
+export default function ProductsList({ products }) {
   return (
-    <div>ProductsList</div>
+
+    <>
+      {products.length > 0 ? (
+        <Alert variant="danger"> محصولی برای این دسته یافت نشد! </Alert>
+      ) : (
+        products.map(product => <ProductCard key={product.id} product={product} />)
+      )}
+    </>
+
+
   )
 }
