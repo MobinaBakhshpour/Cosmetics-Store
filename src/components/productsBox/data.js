@@ -26,3 +26,4 @@ const products = [
     { id: 25, name: ' قرص کافئین کارن ', price: 198_000, description: `قرص کافئین کارن با تحریک لیپولیز و افزایش سوخت و ساز بدن باعث چربی سوزی شده و ضمن افزایش قدرت انقباضی عضلات، موجب کاهش دردهای عضلانی در فرد می‌شود.`, image: '/imgs/caffeineTablets.png', category: 'remedial' },
 
 ]
+export default products;

@@ -13,6 +13,8 @@
   --them-color: #BBE3DA;
   --font-style : 'DastNevis';
   --font-style-main: 'FarCompset';
+  --m-LR : 2rem;
+  --m-TB : 3.5rem;
 }
 
 body{
