@@ -1,19 +1,20 @@
 @font-face {
-  font-family: DastNevis;
-  src: url('../public/fonts/Dast\ Nevis-.OTF') format('opentype');
+  font-family: 'BNazanin-Bold';
+  src: url('../public/fonts/B\ Nazanin\ Bold-.ttf') format('opentype');
 }
 
 @font-face{
-  font-family: FarCompset;
-  src: url('../public/fonts/Far_CompsBd.ttf');
+  font-family: 'BNazanin';
+  src: url('../public/fonts/BNazanin.ttf');
 }
 
 :root{
   --bg-color: #F8F8FF;
   --them-color: #BBE3DA;
   --font-style : 'DastNevis';
-  --font-style-main: 'FarCompset';
-  --m-LR : 2rem;
+  --font-style-main: 'BNazanin-Bold';
+  --font-style-second: 'BNazanin';
+  --m-LR : 5rem;
   --m-TB : 3.5rem;
 }
 
