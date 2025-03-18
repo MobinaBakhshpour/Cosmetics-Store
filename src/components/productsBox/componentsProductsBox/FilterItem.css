@@ -12,3 +12,7 @@
 .filterIcon{
     max-width: 4rem;
 }
+
+.activeFilter{
+    border-bottom: solid var(--them-color) 0.2rem;  
+}

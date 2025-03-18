@@ -51,11 +51,11 @@ export default function Slideshow() {
     return (
         <div className="slideshow-container">
             <div ref={slideRef}>
-                <div className="mySlides fade">
+                <div className="mySlides fade1">
                     <a href="#"><img className="slide-img" src="/imgs/slide1.png" alt="Slide 1" /></a>
                 </div>
 
-                <div className="mySlides fade">
+                <div className="mySlides fade1">
                     <a href="#"><img className="slide-img" src="/imgs/slide2.png" alt="Slide 2" /></a>
                 </div>
             </div>

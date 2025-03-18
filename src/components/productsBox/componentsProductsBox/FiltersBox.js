@@ -13,7 +13,7 @@ export default function FiltersBox({ selectedCategory, setSelectedCategory }) {
     <div className='filtersBox'>
 
       {categories.map(category => (
-        < FilterItem key={category.id} name={category.name} icon={category.icon} setSelectedCategory={setSelectedCategory} />
+        < FilterItem key={category.id} name={category.name} icon={category.icon} setSelectedCategory={setSelectedCategory} isActive={category.name === selectedCategory}  />
       ))
       }
 
