@@ -1,0 +1,7 @@
+.footer-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 2rem var(--m-LR) 0rem var(--m-LR);
+    gap: 4rem;
+}

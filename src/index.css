@@ -3,21 +3,21 @@
   src: url('../public/fonts/B\ Nazanin\ Bold-.ttf') format('opentype');
 }
 
-@font-face{
+@font-face {
   font-family: 'BNazanin';
   src: url('../public/fonts/BNazanin.ttf');
 }
 
-:root{
+:root {
   --bg-color: #F8F8FF;
   --them-color: #BBE3DA;
-  --font-style : 'DastNevis';
+  --font-style: 'DastNevis';
   --font-style-main: 'BNazanin-Bold';
   --font-style-second: 'BNazanin';
-  --m-LR : 5rem;
-  --m-TB : 3.5rem;
+  --m-LR: 5rem;
+  --m-TB: 3.5rem;
 }
 
-body{
-  background: var(--bg-color);
+body {
+  background: var(--bg-color)
 }

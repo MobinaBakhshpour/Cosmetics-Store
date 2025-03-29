@@ -1,0 +1,43 @@
+.rightSection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rightSection-container img {
+    width: 13rem;
+}
+
+.description {
+    font-family: var(--font-style-main);
+    font-size: 1.1rem;
+}
+
+.socialMedia-container {
+    align-self: start;
+}
+
+.message {
+    font-family: var(--font-style-main);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.socialMedia div {
+    font-size: 0.9rem;
+}
+
+.socialMedia svg {
+    width: 1.5rem;
+    padding-left: 0.2rem;
+}
