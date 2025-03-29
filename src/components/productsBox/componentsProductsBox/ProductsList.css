@@ -110,8 +110,7 @@
 }
 
 .product-grid .title {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
     text-transform: capitalize;
     margin: 0 0 7px;
 }
@@ -128,8 +127,7 @@
 .product-grid .price {
     color: #0d0d0d;
     font-family: var(--font-style-second);
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .product-grid .price span {
