@@ -50,6 +50,10 @@
     gap: 3.5rem;
 }
 
+.move{
+    cursor: pointer;
+}
+
 .certificat {
     display: flex;
     justify-content: center;

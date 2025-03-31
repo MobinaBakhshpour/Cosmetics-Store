@@ -2,6 +2,10 @@ import React from 'react'
 import './LeftSection.css'
 
 export default function LeftSection() {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   return (
     <div className='containerLeft'>
       <div className='leftSection-container'>
@@ -24,7 +28,7 @@ export default function LeftSection() {
           </ul>
         </div>
         <div className="certificatSection">
-          <div className="move"><a href="#header"> بازگشت به بالا   <svg width={46} height={46} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div className="move"><a onClick={scrollToTop}> بازگشت به بالا   <svg width={46} height={46} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="m18 15-6-6-6 6" /></svg>
           </a>
           </div>
