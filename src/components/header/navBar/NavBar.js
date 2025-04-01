@@ -1,15 +1,14 @@
 import './NavBar.css'
 import React from 'react'
-import { BsBag, BsSearch, BsPerson } from "react-icons/bs";
-
+import { Link } from 'react-router-dom'
 export default function NavBar() {
     return (
         <div className="navBar">
             <div className="rightSection">
-                <a href=""><img src="imgs/logo.png" alt="" className="logo" /></a>
-                <a href="" className="menuTitle"> خانه  </a>
-                <a href="" className="menuTitle">  درباره ما </a>
-                <a href="" className="menuTitle"> وبلاگ  </a>
+                <Link to="/"><img src="imgs/logo.png" alt="" className="logo" /></Link>
+                <Link to="/" className="menuTitle"> خانه  </Link>
+                <Link to="" className="menuTitle">  درباره ما </Link>
+                <Link to="" className="menuTitle"> وبلاگ  </Link>
             </div>
 
 

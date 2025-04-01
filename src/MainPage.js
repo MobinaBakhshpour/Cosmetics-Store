@@ -1,14 +1,12 @@
 import React from 'react'
-import Header from './components/header/Header';
+import Slideshow from './components/header/slideshow/Slideshow';
 import ProductBox from './components/productsBox/ProductBox';
-import Footer from './components/footer/Footer';
 
 export default function MainPage() {
     return (
         <div>
-            <Header />
+            <Slideshow />
             <ProductBox />
-            <Footer />
         </div>
     )
 }

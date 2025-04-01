@@ -18,6 +18,11 @@
   --m-TB: 3.5rem;
 }
 
+html, body {
+  scroll-behavior: auto !important;
+  overflow: visible !important;
+}
+
 body {
   background: var(--bg-color)
 }

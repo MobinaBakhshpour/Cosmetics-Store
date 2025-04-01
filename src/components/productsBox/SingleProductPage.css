@@ -1,0 +1,91 @@
+.singleProductPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 5rem var(--m-LR);
+}
+
+svg{
+    padding-left: 0.3rem;
+}
+
+.description-product {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title-product {
+    font-family: var(--font-style-main);
+    color: #3f9a86;
+}
+
+.price-product,
+.descriptionTitle {
+    font-family: var(--font-style-main);
+}
+
+.descriptionTitle {
+    padding-top: 1.5rem ;
+    width: 100%;
+    border-bottom: solid #3f9a86 1px;
+}
+
+.description {
+    font-family: var(--font-style-main);
+    max-width: 25rem;
+    text-align: justify;
+}
+
+.deliver{
+    font-family: var(--font-style-main);
+    padding-top: 1.5rem;
+}
+
+.deliverTitle{
+    width: 25rem;
+    border-bottom: solid #3f9a86 1px;
+}
+
+.showImage-product img {
+    max-width: 40rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.details-product{
+
+}
+
+.detailList{
+    list-style: none;
+    font-family: var(--font-style-main);
+    text-align: start;
+    padding-right: 0;
+}
+
+.detailList li{
+    padding: 0.3rem 0;
+}
+
+.addToCard{
+    width: 100%;
+    color: #fff;
+    background-color: #3f9a86;
+    font-family: var(--font-style-main);
+    padding: 0.5rem 0;
+    border: none;
+}
+
+.giveTime{
+    font-family: var(--font-style-main);
+    padding-top: 2.5rem;
+}
+
+.giveTimeDescription{
+    color: #9E9E9E;
+    width: 100%;
+}
