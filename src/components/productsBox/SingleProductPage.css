@@ -7,7 +7,7 @@
     margin: 5rem var(--m-LR);
 }
 
-svg{
+svg {
     padding-left: 0.3rem;
 }
 
@@ -30,7 +30,7 @@ svg{
 }
 
 .descriptionTitle {
-    padding-top: 1.5rem ;
+    padding-top: 1.5rem;
     width: 100%;
     border-bottom: solid #3f9a86 1px;
 }
@@ -41,12 +41,12 @@ svg{
     text-align: justify;
 }
 
-.deliver{
+.deliver {
     font-family: var(--font-style-main);
     padding-top: 1.5rem;
 }
 
-.deliverTitle{
+.deliverTitle {
     width: 25rem;
     border-bottom: solid #3f9a86 1px;
 }
@@ -56,22 +56,35 @@ svg{
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
-.details-product{
+.details-product {}
 
-}
-
-.detailList{
+.detailList {
     list-style: none;
     font-family: var(--font-style-main);
     text-align: start;
     padding-right: 0;
 }
 
-.detailList li{
+.detailList li {
     padding: 0.3rem 0;
 }
 
-.addToCard{
+.productCounter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    background-color: #ECEFF1;
+    color: #3f9a86;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+}
+
+.productCounter svg {
+    cursor: pointer;
+}
+
+.addToCard {
     width: 100%;
     color: #fff;
     background-color: #3f9a86;
@@ -80,12 +93,12 @@ svg{
     border: none;
 }
 
-.giveTime{
+.giveTime {
     font-family: var(--font-style-main);
     padding-top: 2.5rem;
 }
 
-.giveTimeDescription{
+.giveTimeDescription {
     color: #9E9E9E;
     width: 100%;
 }

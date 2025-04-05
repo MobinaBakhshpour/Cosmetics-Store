@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import data from './data'
 import './SingleProductPage.css'
@@ -6,6 +6,14 @@ import './SingleProductPage.css'
 export default function SingleProductPage() {
     let params = useParams();
     let product = data.find(product => product.id == params.productId)
+
+    let [productCount, setProductCount] = useState(1);
+    let minusCount = () => {
+        productCount != 1 ? setProductCount(prevCount => prevCount - 1) : setProductCount(1);
+    }
+    let addCount = () => {
+        setProductCount(prevCount => prevCount + 1);
+    }
 
     return (
         <>
@@ -38,6 +46,7 @@ export default function SingleProductPage() {
                             <li><svg width={30} height={30} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg><span>گارانتی اصالت کالا</span></li>
                             <li><svg width={30} height={30} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg><span>ارسال از 1 روز کاری</span></li>
                         </ul>
+                        <div className="productCounter"><svg onClick={addCount} width={30} height={30} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5v14" /><path d="M5 12h14" /></svg> {productCount} <svg onClick={minusCount} width={30} height={30} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14" /></svg></div>
                         <button className='addToCard'>افزودن به سبد خرید</button>
                         <div className="giveTime">
                             <div className="giveTimeTitle"> نیاز به زمان دارید؟ </div>
