@@ -1,0 +1,7 @@
+.custom-toast-container{
+    background-color: var(--them-color);
+    color: #018498;
+    border-color: #018498;
+    font-family: var(--font-style-main);
+    font-size: 1.1rem;
+}

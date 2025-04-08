@@ -1,0 +1,50 @@
+.ProductsSlidebar {
+    position: none;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 25%;
+    height: 100%;
+    font-family: var(--font-style-main);
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.ProductsSlidebar-close {
+    position: fixed;
+    top: 1rem;
+    right: 22%;
+}
+
+.ProductsSlidebar-title {
+    font-size: 1.5rem;
+    padding: 2rem 1.3rem 2rem 0;
+}
+
+.ProductsSlidebar-title span {
+    background-color: #BBE3DA;
+    color: #48685e;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.details-containor {
+    border-bottom: 1px solid #E0E0E0;
+    margin: 0 0 1.5rem 0;
+}
+
+.ProductsSlidebar img {
+    max-width: 3rem;
+}
+
+.ProductsSlidebar-productShow {
+    background-color: #BBE3DA;
+    padding: 0.3rem;
+    color: #48685e;
+    cursor: pointer;
+}
