@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 import routes from './routes';
 import NavBar from './components/header/navBar/NavBar';
@@ -7,17 +7,23 @@ import Footer from './components/footer/Footer';
 import ScrollToTop from './ScrollToTop';
 import Toast from './components/toast/Toast'
 import ProductsSlidebar from './components/productsSlidebar/ProductsSlidebar'
+import {contextData} from './components/contextData/ContextData'
+import products from './components/productsBox/data'
 
 function App() {
   let router = useRoutes(routes);
+  let [isShowToast, setIsShowToast] = useState(false)
+  let [isShowSlidebarProduct, setIsShowSlidebarProduct] = useState(false)
   return (
     <div className="App">
-      <ScrollToTop />
-      <NavBar />
-      {router}
-      <ProductsSlidebar />
-      <Toast />
-      <Footer />
+      <contextData.Provider value={{ isShowToast, setIsShowToast, isShowSlidebarProduct, setIsShowSlidebarProduct, products }}>
+        <ScrollToTop />
+        <NavBar />
+        {router}
+        <ProductsSlidebar />
+        <Toast />
+        <Footer />
+      </contextData.Provider>
     </div>
   );
 }

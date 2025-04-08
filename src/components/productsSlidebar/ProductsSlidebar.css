@@ -1,5 +1,6 @@
 .ProductsSlidebar {
-    position: none;
+    display: none;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 1;
@@ -14,6 +15,7 @@
     position: fixed;
     top: 1rem;
     right: 22%;
+    cursor: pointer;
 }
 
 .ProductsSlidebar-title {
