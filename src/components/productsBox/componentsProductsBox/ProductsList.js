@@ -34,7 +34,7 @@ export default function ProductsList({ products }) {
                 }}> خرید </Link>
               </div>
               <div className="product-content">
-                <h3 className="title"><a href="#">{product.name}</a></h3>
+                <h3 className="title"><Link to={`/product/${product.id}`}>{product.name}</Link></h3>
                 <div className="price">{product.price} <span>تومان</span></div>
               </div>
             </div>
