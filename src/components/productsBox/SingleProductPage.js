@@ -55,15 +55,26 @@ export default function SingleProductPage() {
                             setTimeout(() => {
                                 contextValue.setIsShowToast(false)
                             }, 2000);
-                            let newProductCartUser = {
-                                id: product.id,
-                                productId: product.id,
-                                name: product.name,
-                                price: product.price,
-                                count: 1,
-                                image: product.image,
+                            let isInProductCart = contextValue.newProductCart.some(productCart => productCart.name === product.name)
+                            if (!isInProductCart) {
+                                let newProductCartUser = {
+                                    id: contextValue.newProductCart.length + 1,
+                                    productId: product.id,
+                                    name: product.name,
+                                    price: product.price,
+                                    count: productCount,
+                                    image: product.image,
+                                }
+                                contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
                             }
-                            contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
+                            else {
+                                let productsCart = [...contextValue.newProductCart];
+                                productsCart.forEach(productCart => {
+                                    if (productCart.name === product.name) {
+                                        productCart.count = productCart.count + productCount;
+                                    }
+                                })
+                            }
                         }} >افزودن به سبد خرید</button>
                         <div className="giveTime">
                             <div className="giveTimeTitle"> نیاز به زمان دارید؟ </div>

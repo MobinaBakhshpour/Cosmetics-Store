@@ -31,15 +31,27 @@ export default function ProductsList({ products }) {
                   setTimeout(() => {
                     contextValue.setIsShowToast(false)
                   }, 2000);
-                  let newProductCartUser = {
-                    id: product.id,
-                    productId: product.id,
-                    name: product.name,
-                    price: product.price,
-                    count: 1,
-                    image: product.image,
+
+                  let isInProductCart = contextValue.newProductCart.some(productCart => productCart.name === product.name)
+                  if (!isInProductCart) {
+                    let newProductCartUser = {
+                      id: contextValue.newProductCart.length + 1,
+                      productId: product.id,
+                      name: product.name,
+                      price: product.price,
+                      count: 1,
+                      image: product.image,
+                    }
+                    contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
+                  } else {
+                    let productsCart = [...contextValue.newProductCart];
+                    productsCart.forEach(productCart => {
+                      if (productCart.name === product.name) {
+                        productCart.count += 1;
+                      }
+                    })
                   }
-                  contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
+
                 }}> خرید </Link>
               </div>
               <div className="product-content">
