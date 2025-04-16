@@ -31,6 +31,15 @@ export default function ProductsList({ products }) {
                   setTimeout(() => {
                     contextValue.setIsShowToast(false)
                   }, 2000);
+                  let newProductCartUser = {
+                    id: product.id,
+                    productId: product.id,
+                    name: product.name,
+                    price: product.price,
+                    count: 1,
+                    image: product.image,
+                  }
+                  contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
                 }}> خرید </Link>
               </div>
               <div className="product-content">

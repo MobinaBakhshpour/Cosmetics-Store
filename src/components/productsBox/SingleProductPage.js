@@ -55,6 +55,15 @@ export default function SingleProductPage() {
                             setTimeout(() => {
                                 contextValue.setIsShowToast(false)
                             }, 2000);
+                            let newProductCartUser = {
+                                id: product.id,
+                                productId: product.id,
+                                name: product.name,
+                                price: product.price,
+                                count: 1,
+                                image: product.image,
+                            }
+                            contextValue.setNewProductCart((prevValue) => [...prevValue, newProductCartUser]);
                         }} >افزودن به سبد خرید</button>
                         <div className="giveTime">
                             <div className="giveTimeTitle"> نیاز به زمان دارید؟ </div>
