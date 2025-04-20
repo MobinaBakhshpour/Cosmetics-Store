@@ -1,9 +1,48 @@
-.filtersBox{
+.filtersBox {
     height: 5.5rem;
     margin: var(--m-TB) var(--m-LR);
     border: solid #E1E1E1 0.1rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+}
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .filterIcon {
+        max-width: 2.5rem;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .filtersBox {
+        margin: var(--m-TB);
+        height: 5rem;
+    }
+
+    .filterItem {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .filterIcon {
+        max-width: 2rem;
+    }
+
+    .activeFilter {
+        border-bottom: solid var(--them-color) 0.1rem;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .filtersBox {
+        margin: 2rem;
+        height: 3.5rem;
+    }
+
+    .filterIcon {
+        display: none;
+    }
 }
