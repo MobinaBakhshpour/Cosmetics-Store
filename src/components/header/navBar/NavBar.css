@@ -6,12 +6,35 @@
     margin-bottom: 0;
 }
 
+.navBar-samllScreen {
+    display: none;
+}
+
+.showHamburgerMenu {
+    display: flex;
+    z-index: 2;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--them-color);
+    flex-direction: column;
+    justify-content: left;
+    align-items: right;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.showHamburgerMenu .showHamburgerMenu-close {
+    text-align: left;
+}
+
 .rightSection {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2.3rem;
-
 }
 
 .logo {
@@ -29,7 +52,10 @@ a {
 .menuTitle {
     font-family: var(--font-style-main);
     font-size: 1.3rem;
+}
 
+.menuTitle:hover {
+    color: #3f9a86;
 }
 
 .leftSection {
@@ -38,8 +64,6 @@ a {
     align-items: center;
     gap: 2.3rem
 }
-
-.search__container {}
 
 .search__input {
     padding: 3px 27px;
@@ -66,15 +90,12 @@ a {
 
 .search__input:hover,
 .search__input:focus {
-    /* padding: 12px 0; */
     outline: 0;
     border: 1px solid transparent;
     border-bottom: 1px solid #575756;
     border-radius: 0;
     background-position: 100% center;
 }
-
-
 
 .basketIcon {
     font-size: 1.5rem;
@@ -105,4 +126,132 @@ a {
     background-color: var(--them-color);
     border-radius: 0.5rem;
     font-size: 1.1rem;
+}
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .navBar {
+        margin: 1rem 2rem;
+        margin-bottom: 0px;
+    }
+
+    .rightSection {
+        gap: 1.5rem;
+    }
+
+    .logo {
+        max-width: 100px;
+        height: 46px;
+        padding-left: 1.5rem;
+    }
+
+    .menuTitle {
+        font-size: 1.1rem;
+    }
+
+    .leftSection {
+        gap: 1.5rem
+    }
+
+    .search__input {
+        line-height: 1rem;
+        padding: 3px 0 0 0;
+    }
+
+    .basketIcon svg {
+        width: 1.6rem;
+        padding: 0;
+    }
+
+    .basketIcon span {
+        width: 16px;
+        font-size: 13px;
+    }
+
+    .logInBts {
+        width: 6.5rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .navBar {
+        margin: 1rem 2rem;
+        margin-bottom: 0px;
+    }
+
+    .rightSection {
+        gap: 1.5rem;
+    }
+
+    .logo {
+        max-width: 100px;
+        height: 46px;
+        padding-left: 1.5rem;
+    }
+
+    .menuTitle {
+        font-size: 1.1rem;
+    }
+
+    .leftSection {
+        gap: 1.5rem
+    }
+
+    .search__container {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAABuklEQVRIS+2WyysFcRTH7/VMXgsLyUopCcVSIWUhiY1HLMjGysqOrZKtjb9AQthYIHmksLDwKlZeC4piITvvz7dmdP3u3LmNmW534Veffvd3fnPOd86ZM7+54VACRziBWqGkEKsh43wfWT/je2T6m5mlcsEZlPkQsl3P+VEJX7bBFGtkYxumYNGHYCe+Q6B4O7HEetiYhV6Y8yHmGMfM7F8sXoUDLWO91Wk5zFewDi8RdxCIWAEBp6HFSO2OdT9sWfYm5g3QbNuiTpB4DbKGcy2Mwio8Qh2MQTlUwXWsGnvpxmaCSGwYJo2ARaxvYN7K0FHPi9gIESZAR9mxQ7RTbIqn7HyLSUiCpXDpEG0XWwkUByFmP89ugi0YATNZP8AetAYhlk2QE/iEBri3gqp0h1ANv7rPFPXyzOSr57UC+jroVNfQ66DTXWMG+uDnpI8U9Com31xQ66tchbAJ6s5BCwkOwLvfzEz/yHUKC30pumAZOkxBM7M268JxZp0A5rjFcOGimMbeErRDVNeaYirRE6THCPiBPQveXAQz2FOzHMQro/bzoALUzuZ4xbDvIuS6lRT/rv5688mT2TfSGWkcDXxsbQAAAABJRU5ErkJggg==");
+        width: 1.6rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+
+    .search__input {
+        display: none;
+    }
+
+    .basketIcon svg {
+        width: 1.6rem;
+        padding: 0;
+    }
+
+    .basketIcon span {
+        width: 16px;
+        font-size: 13px;
+    }
+
+    .logInBts {
+        width: 6.5rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media screen and (max-width :576px) {
+
+    .navBar {
+        margin: 1rem;
+    }
+
+    .leftSection,
+    .rightSection {
+        display: none;
+    }
+
+    .navBar-samllScreen {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .logo {
+        border: none;
+        padding: 0;
+    }
+
+    .navBar-samllScreen svg {
+        padding: 0;
+        cursor: pointer;
+    }
 }

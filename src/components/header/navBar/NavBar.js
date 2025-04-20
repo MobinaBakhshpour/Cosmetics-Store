@@ -10,13 +10,29 @@ export default function NavBar() {
 
     return (
         <div className="navBar">
+            <div className="navBar-samllScreen">
+                <Link to="/"><img src="imgs/logo.png" alt="" className="logo" /></Link>
+                <svg onClick={() => contextValue.setIsShowHamburgerMenu(true)} width={27} height={27} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" /><path d="M3 6h18" /><path d="M3 18h18" /></svg>
+                {contextValue.isShowHamburgerMenu &&
+                    <div className="showHamburgerMenu">
+                        <div className="showHamburgerMenu-close" onClick={() => contextValue.setIsShowHamburgerMenu(false)}><svg width={35} height={35} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></div>
+                        <div><Link to="/" className="menuTitle" onClick={() => contextValue.setIsShowHamburgerMenu(false)}> خانه  </Link></div>
+                        <div><Link to="" className="menuTitle">  درباره ما </Link></div>
+                        <div><Link to="" className="menuTitle"> وبلاگ  </Link></div>
+                        <div><Link to="" className="menuTitle" onClick={() => {
+                            contextValue.setIsShowSlidebarProduct(true)
+                            contextValue.setIsShowHamburgerMenu(false)
+                        }}> سبد خرید  </Link></div>
+                        <div><Link to="" className="menuTitle"> ورود | عضویت </Link></div>
+                    </div>
+                }
+            </div>
             <div className="rightSection">
                 <Link to="/"><img src="imgs/logo.png" alt="" className="logo" /></Link>
                 <Link to="/" className="menuTitle"> خانه  </Link>
                 <Link to="" className="menuTitle">  درباره ما </Link>
                 <Link to="" className="menuTitle"> وبلاگ  </Link>
             </div>
-
 
             <div className="leftSection">
                 <div className="search__container">

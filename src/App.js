@@ -15,9 +15,10 @@ function App() {
   let [isShowToast, setIsShowToast] = useState(false)
   let [isShowSlidebarProduct, setIsShowSlidebarProduct] = useState(false)
   const [newProductCart, setNewProductCart] = useState([])
+  let [isShowHamburgerMenu, setIsShowHamburgerMenu] = useState(false)
   return (
     <div className="App">
-      <contextData.Provider value={{ isShowToast, setIsShowToast, isShowSlidebarProduct, setIsShowSlidebarProduct, products, newProductCart, setNewProductCart }}>
+      <contextData.Provider value={{ isShowToast, setIsShowToast, isShowSlidebarProduct, setIsShowSlidebarProduct, products, newProductCart, setNewProductCart, isShowHamburgerMenu, setIsShowHamburgerMenu }}>
         <ScrollToTop />
         <NavBar />
         {router}
