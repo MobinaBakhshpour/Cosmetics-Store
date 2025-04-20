@@ -6,15 +6,15 @@
 .slideshow-container {
     width: 100%;
     margin: var(--m-TB) 0 0 var(--m-TB);
-    text-align:center;
+    text-align: center;
 }
 
 /* Hide the images by default */
 .mySlides {
-    display: none;   
+    display: none;
 }
 
-.slide-img{
+.slide-img {
     max-width: 100%;
 }
 
@@ -49,5 +49,33 @@
 
     to {
         opacity: 1
+    }
+}
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .slideshow-container {
+        margin: 2.5rem 0;
+    }
+
+    .dot {
+        height: 6px;
+        width: 6px;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .dot {
+        height: 5px;
+        width: 5px;
     }
 }
