@@ -5,3 +5,13 @@
     margin: 2rem var(--m-LR) 0rem var(--m-LR);
     gap: 4rem;
 }
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .footer-container{
+        margin: 1rem 0rem 0rem 0rem;
+        gap: 1rem;
+    }
+}

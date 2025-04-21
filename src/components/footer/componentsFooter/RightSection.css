@@ -41,3 +41,51 @@
     width: 1.5rem;
     padding-left: 0.2rem;
 }
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .rightSection-container {
+        padding-right: 1rem;
+    }
+
+    .rightSection-container img {
+        width: 8rem;
+    }
+
+    .rightSection-container .description {
+        font-size: 0.8rem;
+        max-width: 15rem;
+        text-align: center;
+    }
+
+    .rightSection-container .message {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .socialMedia-container .socialMedia {
+        gap: 0.5rem;
+    }
+
+    .socialMedia div {
+        font-size: 0.5rem;
+    }
+
+    .socialMedia svg {
+        width: 0.8rem;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .rightSection-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .rightSection-container {
+        display: none;
+    }
+}
