@@ -15,7 +15,7 @@ export default function ProductsList({ products }) {
     ) : (
       <div className="row container-productCard">
         {products.map(product => (
-          <div className="col-lg-3 col-md-6 col-sm-12" key={product.id}>
+          <div className="col-lg-3 col-sm-6 col-12" key={product.id}>
             <div className="product-grid">
               <div className="product-image">
                 <Link to={`/product/${product.id}`} className="image">
