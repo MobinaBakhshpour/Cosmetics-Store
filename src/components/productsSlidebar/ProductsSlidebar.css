@@ -50,3 +50,73 @@
     color: #48685e;
     cursor: pointer;
 }
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .ProductsSlidebar {
+        width: 45%;
+    }
+
+    .ProductsSlidebar-close {
+        right: 40%;
+    }
+
+    .row .productsSlidebar-header,
+    .details-containor img,
+    .ProductsSlidebar-productCount {
+        display: none !important;
+    }
+
+    .ProductsSlidebar-close svg {
+        width: 1.8rem;
+    }
+
+    .ProductsSlidebar-title {
+        font-size: 1.1rem;
+    }
+
+    .ProductsSlidebar-title .ProductsSlidebar-count {
+        width: 1.1rem;
+        height: 1rem;
+    }
+
+    .details-containor h5 {
+        font-size: 1rem;
+    }
+
+    .ProductsSlidebar-productName,
+    .ProductsSlidebar-productPrice {
+        font-size: 0.8rem;
+    }
+
+    .ProductsSlidebar-productPrice {
+        color: var(--them-color);
+    }
+
+    .ProductsSlidebar-productShow a {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .ProductsSlidebar {
+        width: 50%;
+    }
+
+    .ProductsSlidebar-close {
+        right: 45%;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .ProductsSlidebar {
+        width: 70%;
+    }
+
+    .ProductsSlidebar-close {
+        right: 65%;
+    }
+
+}
