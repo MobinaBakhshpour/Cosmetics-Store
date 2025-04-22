@@ -65,6 +65,10 @@
         text-align: center;
     }
 
+    .socialMedia-container {
+        align-self: center;
+    }
+
     .socialMedia-container .socialMedia {
         gap: 0.5rem;
     }

@@ -18,11 +18,15 @@
   --m-TB: 3.5rem;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: auto !important;
   overflow: visible !important;
 }
 
 body {
-  background: var(--bg-color)
+  /* background: var(--bg-color) */
+  background-color: #F8F8FF;
+  background-image: radial-gradient(rgb(63 154 134 / 33%) 0.6000000000000001px, #F8F8FF 0.6000000000000001px);
+  background-size: 12px 12px;
 }

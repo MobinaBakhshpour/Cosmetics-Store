@@ -6,7 +6,6 @@
 
 .container-productCard {
     margin: var(--m-TB) var(--m-LR);
-
 }
 
 .product-grid {
@@ -29,7 +28,6 @@
 .product-grid .product-image img {
     width: 100%;
     height: auto;
-
 }
 
 .product-grid .product-discount-label {
@@ -65,7 +63,6 @@
     line-height: 28px;
     width: 28px;
     height: 28px;
-    /* border: 1px solid #333; */
     border-bottom: none;
     display: block;
     transition: all 0.3s;
@@ -139,5 +136,12 @@
 @media screen and (max-width: 990px) {
     .product-grid {
         margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .product-content .title a {
+        color: #757575;
+        font-size: 1.1rem;
     }
 }

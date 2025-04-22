@@ -50,4 +50,9 @@
     .filterIcon {
         display: none;
     }
+
+    .activeFilter {
+        color: var(--them-color);
+        border: none;
+    }
 }
