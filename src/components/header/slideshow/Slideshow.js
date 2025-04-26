@@ -54,7 +54,7 @@ export default function Slideshow() {
                 <div className="mySlides fade1">
                     <a href="#">
                         <picture>
-                            <source srcSet="/imgs/slide1-tablet.png" media="(max-width: 768px)" />
+                            <source srcSet="/imgs/slide1-tablet.PNG" media="(max-width: 768px)" />
                             <img className="slide-img" src="/imgs/slide1.png" alt="Slide 1" />
                         </picture>
                     </a>
@@ -63,7 +63,7 @@ export default function Slideshow() {
                 <div className="mySlides fade1">
                     <a href="#">
                         <picture>
-                            <source srcSet="/imgs/slide2-tablet.png" media="(max-width: 768px)" />
+                            <source srcSet="/imgs/slide2-tablet.PNG" media="(max-width: 768px)" />
                             <img className="slide-img" src="/imgs/slide2.png" alt="Slide 2" />
                         </picture>
                     </a>
