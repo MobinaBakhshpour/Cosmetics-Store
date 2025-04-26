@@ -1,6 +1,7 @@
 .filtersBox {
     height: 5.5rem;
     margin: var(--m-TB) var(--m-LR);
+    background-color: var(--bg-color);
     border: solid #E1E1E1 0.1rem;
     display: flex;
     justify-content: space-evenly;

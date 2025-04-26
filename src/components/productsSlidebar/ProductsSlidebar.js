@@ -7,7 +7,7 @@ export default function ProductsSlidebar() {
     const contextValue = useContext(contextData)
 
     let totalProducts = contextValue.newProductCart.reduce((total, product) => total + product.count, 0)
-    
+
     return (
         <div className={`ProductsSlidebar ${contextValue.isShowSlidebarProduct ? 'd-block' : 'd-none'}`}>
             <div className="ProductsSlidebar-close" onClick={() => contextValue.setIsShowSlidebarProduct(false)}><svg width={35} height={35} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></div>

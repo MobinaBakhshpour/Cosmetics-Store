@@ -22,7 +22,9 @@ export default function NavBar() {
                         <div><Link to="" className="menuTitle" onClick={() => {
                             contextValue.setIsShowSlidebarProduct(true)
                             contextValue.setIsShowHamburgerMenu(false)
-                        }}> سبد خرید  </Link></div>
+                        }}> سبد خرید  </Link>
+                            <span className='basketIcon-counter-showHamburgerMenu'>{totalProducts}</span>
+                        </div>
                         <div><Link to="" className="menuTitle"> ورود | عضویت </Link></div>
                     </div>
                 }

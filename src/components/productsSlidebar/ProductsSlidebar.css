@@ -112,11 +112,15 @@
 
 @media screen and (max-width :576px) {
     .ProductsSlidebar {
-        width: 70%;
+        width: 100%;
     }
 
     .ProductsSlidebar-close {
-        right: 65%;
+        right: 85%;
+    }
+
+    .details-containor .ProductsSlidebar-productCount {
+        display: block !important;
     }
 
 }

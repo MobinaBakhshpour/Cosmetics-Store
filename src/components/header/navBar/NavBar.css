@@ -254,4 +254,14 @@ a {
         padding: 0;
         cursor: pointer;
     }
+
+    .basketIcon-counter-showHamburgerMenu {
+        display: inline-block;
+        width: 20px;
+        background-color: rgb(63, 154, 134);
+        text-align: center;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
+
 }
