@@ -3,8 +3,9 @@ import './FilterItem.css'
 
 export default function FilterItem({ name, icon, setSelectedCategory, isActive }) {
     return (
-        <>
-            <div className={`filterItem ${isActive ? "activeFilter" : ""}`} onClick={() => setSelectedCategory(name)} ><img className='filterIcon' src={icon} alt={name} />{name}</div>
-        </>
+        <div className='filterItem-container'>
+            <div className={`filterItem ${isActive ? "activeFilter" : ""}`} onClick={() => setSelectedCategory(name)} >{icon}</div>
+            <div className="filterItem-name">{name}</div>
+        </div>
     )
 }

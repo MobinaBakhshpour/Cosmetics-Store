@@ -1,7 +1,7 @@
-.filterItem{
+.filterItem-container {
     cursor: pointer;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: var(--font-style-main);
@@ -9,10 +9,72 @@
     gap: 0.8rem;
 }
 
-.filterIcon{
+.filterItem {
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-color);
+}
+
+.filterItem:hover {
+    box-shadow: 0px 1px 5px 0 var(--them-color);
+    background: linear-gradient(90deg, rgba(240, 248, 255, 0.73) 0%, rgba(248, 248, 255, 0.9) 100%);
+}
+
+.filterItem-name {
+    color: #808080;
+}
+
+.filterIcon {
     max-width: 4rem;
 }
 
-.activeFilter{
-    border-bottom: solid var(--them-color) 0.2rem;  
+.activeFilter {
+    box-shadow: 0px 1px 5px 0 var(--them-color);
+    background: linear-gradient(90deg, rgba(240, 248, 255, 0.73) 0%, rgba(248, 248, 255, 0.9) 100%);
+}
+
+.activeFilter svg {
+    stroke: #9ddacc;
+    fill: #9ddacc;
+}
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+@media screen and (max-width :992px) {
+    .filterItem-container {
+        font-size: 1.1rem;
+    }
+
+    .filterItem svg {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .filterItem-container {
+        font-size: 1rem;
+    }
+
+    .filterItem svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .filterItem-container {
+        font-size: 0.8rem;
+    }
+
+    .filterItem {
+        padding: 0.5rem;
+    }
+
+    .filterItem svg {
+        width: 30px;
+        height: 30px;
+    }
 }
