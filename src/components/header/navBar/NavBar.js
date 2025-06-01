@@ -17,7 +17,7 @@ export default function NavBar() {
                     <div className="showHamburgerMenu">
                         <div className="showHamburgerMenu-close" onClick={() => contextValue.setIsShowHamburgerMenu(false)}><svg width={35} height={35} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></div>
                         <div><Link to="/" className="menuTitle" onClick={() => contextValue.setIsShowHamburgerMenu(false)}> خانه  </Link></div>
-                        <div><Link to="" className="menuTitle">  درباره ما </Link></div>
+                        <div><Link to="/aboutUs" className="menuTitle">  درباره ما </Link></div>
                         <div><Link to="" className="menuTitle"> وبلاگ  </Link></div>
                         <div><Link to="" className="menuTitle" onClick={() => {
                             contextValue.setIsShowSlidebarProduct(true)
@@ -32,7 +32,7 @@ export default function NavBar() {
             <div className="rightSection">
                 <Link to="/"><img src="imgs/logo.png" alt="" className="logo" /></Link>
                 <Link to="/" className="menuTitle"> خانه  </Link>
-                <Link to="" className="menuTitle">  درباره ما </Link>
+                <Link to="/aboutUs" className="menuTitle">  درباره ما </Link>
                 <Link to="" className="menuTitle"> وبلاگ  </Link>
             </div>
 

@@ -38,7 +38,7 @@ export default function ProductsList({ products }) {
                       id: contextValue.newProductCart.length + 1,
                       productId: product.id,
                       name: product.name,
-                      price: product.price,
+                      price: product.price.toLocaleString(),
                       count: 1,
                       image: product.image,
                     }
@@ -56,7 +56,7 @@ export default function ProductsList({ products }) {
               </div>
               <div className="product-content">
                 <h3 className="title"><Link to={`/product/${product.id}`}>{product.name}</Link></h3>
-                <div className="price">{product.price} <span>تومان</span></div>
+                <div className="price">{product.price?.toLocaleString()} <span>تومان</span></div>
               </div>
             </div>
           </div>

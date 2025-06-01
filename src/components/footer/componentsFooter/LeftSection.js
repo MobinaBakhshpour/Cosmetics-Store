@@ -1,5 +1,6 @@
 import React from 'react'
 import './LeftSection.css'
+import { Link } from 'react-router-dom'
 
 export default function LeftSection() {
 
@@ -12,19 +13,19 @@ export default function LeftSection() {
         <div className="rightSection-footer">
           <ul className='footerMenu-right'>
             <li className='footerMenu-right-title'> دسترسی سریع </li>
-            <li><a href="#"> صفحه اصلی </a></li>
-            <li><a href="#"> وبلاگ </a></li>
-            <li><a href="#"> درباره ما </a></li>
-            <li><a href="#"> تخفیفات </a></li>
+            <li><Link to='/' > صفحه اصلی </Link></li>
+            <li><Link to='' > وبلاگ </Link></li>
+            <li><Link to='/aboutUs' > درباره ما </Link></li>
+            <li><Link to='' > تخفیفات </Link></li>
           </ul>
         </div>
         <div className="leftSection-footer">
           <ul className='footerMenu-right'>
             <li className='footerMenu-right-title'> اطلاعات تماس </li>
-            <li><a href="#"> آدرس دفتر مرکزی : تهران،الهیه </a></li>
-            <li><a href="#"> ادرس انبار مرکزی : تهران ، کارگر شمالی </a></li>
-            <li><a href="#"> تلفن : 021-12345678 </a></li>
-            <li><a href="#"> کد پستی : 123456 </a></li>
+            <li> آدرس دفتر مرکزی : تهران،الهیه </li>
+            <li> ادرس انبار مرکزی : تهران ، کارگر شمالی </li>
+            <li> تلفن : 021-12345678 </li>
+            <li> کد پستی : 123456 </li>
           </ul>
         </div>
         <div className="certificatSection">

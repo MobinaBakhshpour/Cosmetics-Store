@@ -1,0 +1,104 @@
+.aboutUs {
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 6rem var(--m-LR);
+    font-family: var(--font-style-main);
+}
+
+.introduce-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.introduce-section-text {
+    text-align: justify;
+    width: 40rem;
+    font-size: 1.1rem;
+}
+
+.introduce-section-img {
+    width: 30rem;
+}
+
+.ourVision-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 6rem;
+    box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: #235782;
+    font-size: 1.1rem;
+    background-color: #23578208;
+    gap: 2rem;
+
+}
+
+.ourVision-section-imgs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.ourVision-containor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ourVision-section-text {
+    text-align: center;
+
+}
+
+.ourVision-section-img {
+    width: 12rem;
+}
+
+.contactUs-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.contactUs-section-img {
+    width: 30rem;
+}
+
+.contactUs-section-form {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contactUs-section-form textarea {
+    width: 20rem;
+    height: 10rem;
+}
+
+.contactUs-section-form button {
+    width: 3.5rem;
+    height: 2rem;
+    align-self: end;
+    margin-top: 1rem;
+    background-color: #3a87c9;
+    color: white;
+}
+
+.ourTeam-section {
+    margin: 6rem 6rem 0rem 6rem;
+    font-family: var(--font-style-main);
+    font-size: 1.1rem;
+    text-align: justify;
+}

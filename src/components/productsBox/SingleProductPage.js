@@ -24,7 +24,7 @@ export default function SingleProductPage() {
                 <div className='singleProductPage '>
                     <div className='description-product'>
                         <h2 className="title-product">{product.name}</h2>
-                        <h4 className="price-product">{product.price} تومان</h4>
+                        <h4 className="price-product">{product.price.toLocaleString()} تومان</h4>
                         <div className="description-product">
                             <div className="descriptionTitle">
                                 <svg width={30} height={30} fill="none" stroke="#3f9a86" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ export default function SingleProductPage() {
                                     id: contextValue.newProductCart.length + 1,
                                     productId: product.id,
                                     name: product.name,
-                                    price: product.price,
+                                    price: product.price.toLocaleString(),
                                     count: productCount,
                                     image: product.image,
                                 }
