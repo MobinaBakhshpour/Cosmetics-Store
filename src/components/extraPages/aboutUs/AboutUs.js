@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import './AboutUs.css'
 
+
 export default function AboutUs() {
+    const textAreaElm = useRef();
+    const [showToast, setShowToast] = useState(false);
+    const [showInfo, setShowInfo] = useState('');
+    function sendCommentHandler() {
+        if (textAreaElm.current.value !== "") {
+            textAreaElm.current.value = "";
+            setShowToast(true);
+            setShowInfo('پیام شما با موفقیت ارسال شد');
+            setTimeout(() => {
+                setShowToast(false);
+                setShowInfo('');
+            }, 3000);
+
+        } else {
+            setShowInfo('لطفا پیام خود را وارد کنید');
+            setShowToast(true);
+            setTimeout(() => {
+                setShowToast(false);
+                setShowInfo('');
+            }, 3000);
+        }
+    }
+
     return (
         <div className='aboutUs'>
             <div className="aboutUs-containor">
@@ -55,14 +79,22 @@ export default function AboutUs() {
                         <p className="contactUs-section-details">شماره تماس : 021-12345678</p>
                         <p className="contactUs-section-details">صفحه اینستاگرام : MobinaStore</p>
                         <p className="contactUs-section-details">چنل یوتوب : ThisIsMobinaStore</p>
-                        <textarea name="comment" id="comment"></textarea>
-                        <button className="sendComment">ارسال</button>
+                        <textarea name="comment" id="comment" ref={textAreaElm}></textarea>
+                        <button className="sendComment" onClick={sendCommentHandler}>ارسال</button>
                     </div>
                 </div>
                 <div className="ourTeam-section">
                     <div className="outTeam-section-text">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                     </div>
+                </div>
+            </div>
+            <div className={`toast custom-toast-container bg-primary text-white align-items-center position-fixed bottom-0 m-3 z-1  ${showToast ? 'show' : ''}`} >
+                <div className="d-flex justify-content-evenly align-items-center">
+                    <div className="toast-body">
+                        {showInfo}
+                    </div>
+                    <button type="button" className="btn-close" ></button>
                 </div>
             </div>
         </div>
