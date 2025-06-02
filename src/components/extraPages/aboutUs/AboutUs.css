@@ -71,7 +71,7 @@
 }
 
 .contactUs-section-img {
-    width: 30rem;
+    width: 25rem;
 }
 
 .contactUs-section-form {
@@ -83,7 +83,7 @@
 }
 
 .contactUs-section-form textarea {
-    width: 20rem;
+    width: 15rem;
     height: 10rem;
 }
 
@@ -101,4 +101,104 @@
     font-family: var(--font-style-main);
     font-size: 1.1rem;
     text-align: justify;
+}
+
+/* -------------------------------------------- */
+/* Responsive Design */
+
+
+@media screen and (max-width :1200px) {
+    .introduce-section {
+        gap: 2rem;
+    }
+
+    .introduce-section-img {
+        width: 25rem;
+    }
+
+    .ourVision-section-img {
+        width: 8rem;
+    }
+
+    .contactUs-section {
+        gap: 2rem;
+    }
+
+    .contactUs-section-img {
+        width: 23rem;
+    }
+
+    .contactUs-section-form textarea {
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width :992px) {
+    .introduce-section {
+        flex-direction: column;
+    }
+
+    .ourVision-section {
+        margin: 6rem 0;
+        width: 100%;
+    }
+
+    .contactUs-section-img {
+        width: 20rem;
+    }
+
+    .ourTeam-section {
+        margin: 6rem 0rem 0rem 0rem;
+    }
+}
+
+@media screen and (max-width :768px) {
+    .introduce-section-text {
+        width: 26rem;
+    }
+
+    .ourVision-section-img {
+        width: 4.5rem;
+    }
+
+    .ourVision-section-text {
+        font-size: 1rem;
+    }
+
+    .ourVision-containor b {
+        font-size: 0.8rem;
+    }
+
+    .contactUs-section {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width :576px) {
+    .aboutUs {
+        padding: 4rem 2rem;
+    }
+
+    .introduce-section-text {
+        width: 20rem;
+    }
+
+    .introduce-section-img {
+        width: 18rem;
+    }
+    .ourVision-section-text {
+        font-size: 1.1rem;
+    }
+    .ourVision-section-imgs {
+        flex-direction: column;
+    }
+        .ourVision-section-img {
+        width: 8rem;
+    }
+    .ourVision-containor b {
+        font-size: 1rem;
+    }
+    .ourVision-section-text{
+        width: 20rem;
+    }
 }
