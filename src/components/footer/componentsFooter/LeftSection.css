@@ -101,6 +101,10 @@
 @media screen and (max-width :768px) {}
 
 @media screen and (max-width :576px) {
+    .rightSection-footer {
+        padding-right: 15px;
+    }
+
     .footerMenu-right {
         padding: 0;
     }

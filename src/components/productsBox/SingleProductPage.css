@@ -119,22 +119,25 @@ svg {
 @media screen and (max-width :576px) {
     .singleProductPage {
         margin: 3rem 1rem;
+        padding-inline: 1rem;
     }
-    .description-product{
+
+    .description-product {
         align-items: center;
     }
 
     .description-product .description {
         font-size: 0.8rem;
-        max-width: 15rem;
+        /* max-width: 15rem; */
     }
 
     .description-product .deliver {
-        max-width: 15rem;
+        /* max-width: 15rem; */
+        width: 100%;
     }
 
     .deliver .deliverTitle {
-        max-width: 15rem;
+        /* max-width: 15rem; */
     }
 
     .description-product .deliver .deliverDescription {
@@ -146,6 +149,6 @@ svg {
     }
 
     .details-product {
-        max-width: 15rem;
+        /* max-width: 15rem; */
     }
 }
