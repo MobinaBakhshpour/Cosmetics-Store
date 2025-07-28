@@ -138,8 +138,17 @@
         margin-bottom: 30px;
     }
 }
+@media screen and (max-width: 768px) {
+    .container-productCard {
+    margin: var(--m-TB) 3.5rem;
+}
+}
 
 @media screen and (max-width: 576px) {
+    .container-productCard {
+        margin: 2.5rem;
+    }
+
     .product-content .title a {
         color: #757575;
         font-size: 1.1rem;
